@@ -1,7 +1,13 @@
 
 # Phylogeny Tools Pack
 
-## time-to-coalescence
+Tools for lineages and phylogenies.
+
+## Lineage Tools
+
+## Phylogeny Tools
+
+### time-to-coalescence
 
 time2Coalescence.py takes a standard phylogeny json file.
 This script works by first determining all IDs that have the
