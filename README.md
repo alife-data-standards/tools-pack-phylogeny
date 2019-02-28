@@ -20,14 +20,19 @@ This script assumes that an ancestor -1 is a progenitor. If
 -1 is found as MRCA, script will report that no MRCA could
 be found.
 
-usage: time2Coalescence.py [-h] [-path PATH] [-file NAME] [-verbose]
+```
+usage: time-to-coalescence.py [-h] [-path PATH] [-file NAME] [-verbose]
+
+using a standard json formatted pylogeny file, finds time to most recent
+common ancestor for the oldest organisms in file. origin_time is used to find
+oldest organisms and to establish the time axis.
 
 optional arguments:
   -h, --help  show this help message and exit
   -path PATH  path to files - default : none (will read files in current
               directory)
-  -file NAME  name of data file. default : lineageData.csv
+  -file NAME  name of data file. default : lineageData.json
   -verbose    adding this flag will provide more text output while running
               (useful if you are working with a lot of data to make sure that
               you are not hanging) - default (if not set) : OFF
-
+```
