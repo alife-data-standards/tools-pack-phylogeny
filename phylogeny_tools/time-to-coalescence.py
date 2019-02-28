@@ -3,9 +3,9 @@ import csv
 import os
 
 import argparse
-parser = argparse.ArgumentParser()
+parser = argparse.ArgumentParser(description='using a standard json formatted pylogeny file, finds time to most recent common ancestor for the oldest organisms in file. origin_time is used to find oldest organisms and to establish the time axis.')
 parser.add_argument('-path', type=str, metavar='PATH', default = '',  help='path to files - default : none (will read files in current directory)', required=False)
-parser.add_argument('-file', type=str, metavar='NAME', default = 'lineageData.json',  help='name of data file. default : lineageData.csv', required=False)
+parser.add_argument('-file', type=str, metavar='NAME', default = 'lineageData.json',  help='name of data file. default : lineageData.json', required=False)
 parser.add_argument('-verbose', action='store_true', default = False, help='adding this flag will provide more text output while running (useful if you are working with a lot of data to make sure that you are not hanging) - default (if not set) : OFF', required=False)
 
 args = parser.parse_args()
