@@ -5,7 +5,7 @@ import os
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('-path', type=str, metavar='PATH', default = '',  help='path to files - default : none (will read files in current directory)', required=False)
-parser.add_argument('-file', type=str, metavar='NAME', default = 'lineageData.csv',  help='name of data file. default : lineageData.csv', required=False)
+parser.add_argument('-file', type=str, metavar='NAME', default = 'lineageData.json',  help='name of data file. default : lineageData.csv', required=False)
 parser.add_argument('-verbose', action='store_true', default = False, help='adding this flag will provide more text output while running (useful if you are working with a lot of data to make sure that you are not hanging) - default (if not set) : OFF', required=False)
 
 args = parser.parse_args()
@@ -16,7 +16,6 @@ fileName = filePath + filename
 
 with open(filePath+filename, 'r') as fp:
     data = json.load(fp)
-
 
 parentData = {}
 birthData = {}
@@ -31,7 +30,7 @@ for key in data:
     if lineNumber%10000 == 0:
         print('.',end='',flush=True)
     lineNumber += 1
-    parentData[int(key)] = [int(p) for p in data[key]['ancestors']]
+    parentData[int(key)] = [int(p) for p in data[key]['ancestor_list']]
     parentData[int(key)].sort()
     birthData[int(key)] = int(data[key]['origin_time'])
     lastBirthDate = max(lastBirthDate,birthData[int(key)])
