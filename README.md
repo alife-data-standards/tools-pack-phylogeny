@@ -1,5 +1,6 @@
-
 # Phylogeny Tools Pack
+
+[![Build Status](https://travis-ci.org/alife-data-standards/tools-pack-phylogeny.svg?branch=master)](https://travis-ci.org/alife-data-standards/tools-pack-phylogeny)
 
 Common tools for lineages and phylogenies.
 
