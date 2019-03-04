@@ -1,7 +1,7 @@
 
 # Phylogeny Tools Pack
 
-Tools for lineages and phylogenies.
+Common tools for lineages and phylogenies.
 
 ## Lineage Tools
 
@@ -20,6 +20,7 @@ This script assumes that an ancestor -1 is a progenitor. If
 -1 is found as MRCA, script will report that no MRCA could
 be found.
 
+```
 usage: time2Coalescence.py [-h] [-path PATH] [-file NAME] [-verbose]
 
 optional arguments:
@@ -30,4 +31,4 @@ optional arguments:
   -verbose    adding this flag will provide more text output while running
               (useful if you are working with a lot of data to make sure that
               you are not hanging) - default (if not set) : OFF
-
+```
